@@ -12,4 +12,5 @@
  *
  *= require_tree .
  *= require_self
+ *= require material-design-lite/dist/material.deep_orange-red.min.css
  */

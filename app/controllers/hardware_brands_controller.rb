@@ -1,0 +1,2 @@
+class HardwareBrandsController < ApplicationController
+end
