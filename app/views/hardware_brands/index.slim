@@ -1,0 +1,8 @@
+.mdl-grid
+  .mdl-cell.mdl-cell--12-col
+    h2 Marcas
+
+  .mdl-cell.mdl-cell--12-col
+    .mdl-grid
+      - @hardware_brands.each do |hwb|
+        = render 'card', hardware_brand: hwb
