@@ -1,0 +1,26 @@
+.mdl-grid
+  .mdl-cell.mdl-cell--4-col
+    - unless @hardware_brand.logo_image.nil?
+      .mdl-card__media
+        = image_tag @hardware_brand.logo_image, width: 220, height: 140
+
+    h2= @hardware_brand.description
+
+    #brand_details
+      p= "Marca: #{@hardware_brand.description}"
+      p= "País: #{@hardware_brand.country}"
+
+      .hardware-types
+        h4 Tipos de Hardware
+        - @hardware_types.each do |hwt|
+          span.mdl-chip
+            span.mdl-chip__text= hwt
+
+  .mdl-cell.mdl-cell--8-col
+    = render 'hardware_brands/products_table', products: @products
+    
+
+
+    
+
+

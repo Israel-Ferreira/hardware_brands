@@ -1,0 +1,17 @@
+table.mdl-data-table.mdl-js-data-table
+  thead
+    tr
+      th.mdl-data-table__cell--non-numeric  Produto
+      th.mdl-data-table__cell--non-numeric  Tipo
+      th.mdl-data-table__cell--non-numeric Ver
+  
+  tbody
+    - products.each do |product|
+      tr
+        td.mdl-data-table__cell--non-numeric=  product.description
+        td.mdl-data-table__cell--non-numeric=  product.hardware_type.description
+        td.mdl-data-table__cell--non-numeric 
+          = link_to 'Ver', product_path(product), class: 'mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect'
+          
+      
+

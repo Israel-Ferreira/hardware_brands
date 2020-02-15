@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   root to: 'welcome#index'
 
   resources :hardware_brands
+  resources :products
 end

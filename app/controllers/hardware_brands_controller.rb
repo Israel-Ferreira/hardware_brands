@@ -7,6 +7,8 @@ class HardwareBrandsController < ApplicationController
   end
 
   def show
+    @hardware_types = @hardware_brand.hardware_types.pluck(:description)
+    @products = @hardware_brand.products
   end
 
   private
